@@ -46,7 +46,7 @@
 
   <div class=" col-md-4 py-5 px-5 border">
     <h1>LOGIN</h1>
-    <form >
+    <form action="login.php" method="post">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -67,10 +67,9 @@
 <div class="col-md-4">
 </div>
 
-
 <div class=" col-md-4 py-5 px-5 border">
 <h1>SIGNUP</h1>
-    <form >
+    <form action="signup.php" method="post">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
