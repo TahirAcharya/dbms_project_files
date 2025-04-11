@@ -9,43 +9,49 @@ This repository contains a beginner-friendly project demonstrating how to:
 
 ## 📌 Setup Instructions
 
+
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/yourusername/simple-php-webapp.git
 cd simple-php-webapp
-
+```
 
 ### 2. Set up Database
 Open phpMyAdmin
 Create a new database: webapp_db
 Create a table: users
+```bash
 CREATE TABLE users (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(100),
   email VARCHAR(100) UNIQUE,
   password VARCHAR(255)
 );
-
+```
 
 ### 3. In php file:
+```bash
 $conn = mysqli_connect("localhost", "root", "", "webapp_db");
-
-4. Run the Project
+```
+### 4. Run the Project
 Place the files in your XAMPP/LAMP htdocs folder
 
 Start Apache & MySQL
 
-Visit http://localhost/simple-php-webapp/index.html
+Visit http://localhost/projectname/index.php
 
 
-### 📚 Tutorials Covered
+### 📚 Tutorials Covering
 ✅ Using Bootstrap 5 in HTML
 
 ✅ PHP + MySQL Database connection
 
 ✅ PHP Sessions and Login Auth
 
-✅ HTML Form to MySQL Insert
+✅ HTML Signup Form to MySQL Insert
+
+### References:
+[https://getbootstrap.com/](https://getbootstrap.com/)
 
 📧 Contact
-For any queries, reach out at: [tahir@acharya.ac.in]
+For any queries, reach out at: [tahir2968@acharya.ac.in]
