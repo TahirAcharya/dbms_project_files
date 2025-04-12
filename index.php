@@ -109,6 +109,16 @@ else
     <input type="password" class="form-control" name="password" id="exampleInputPassword1" required>
   </div>
 
+  <!-- Select faculty or student -->
+  <div class="input-group mb-3">
+  <label for="inputGroupSelect01" class="form-label">Select Type of User</label><br/>
+  <select class="custom-select" name="usertype" id="inputGroupSelect01">
+    <option selected>Choose Type of User</option>
+    <option value="student">Student</option>
+    <option value="faculty">Faculty</option>
+  </select>
+</div>
+
   <div class="mb-3 form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
     <label class="form-check-label" for="exampleCheck1">Agree to terms and conditions</label>

@@ -7,11 +7,12 @@ include 'connection.php';
         $name = $_POST["Name"];
         $email = $_POST["email"];
         $password = $_POST["password"];
+        $usertype = $_POST["usertype"];
         
         $reg_date = date("Y-m-d H:i:s"); // Current date and time
 
         // SQL query to insert data into the student table
-        $sql = "INSERT INTO students VALUES (NULL,'$name', '$email', '$password', '$reg_date')";
+        $sql = "INSERT INTO students VALUES (NULL,'$name', '$email', '$password', '$reg_date',' $usertype')";
 
         if (mysqli_query($conn, $sql))  // either true or false    1 or zero
         {

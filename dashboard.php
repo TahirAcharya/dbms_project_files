@@ -48,10 +48,12 @@ else
 <h2>Student Data</h2>
 <table class="table">
   <tr> 
+  <th>ID</th>
     <th>Name</th>
     <th>Email</th>
     <th>Password</th>
     <th>Registration Date</th>
+    <th>User Type</th>
 </tr>
 
 <?php
@@ -60,7 +62,7 @@ $result = mysqli_query($conn, "SELECT * FROM students");
  if(mysqli_num_rows($result) > 0)
     while($row = mysqli_fetch_array($result))
     {
-        echo "<tr> <td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td> </tr>";
+        echo "<tr> <td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td><td>".$row[4]."</td><td>".$row[5]."</td>  </tr>";
     }
 
 ?>
