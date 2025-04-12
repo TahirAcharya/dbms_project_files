@@ -11,7 +11,7 @@
   <body>
     
     <?php
-       
+       session_start();
       //  ctrl + i
            // Type 1 connection
 
@@ -78,7 +78,7 @@
         </li>
       </ul>
     </div>
-        <p>  <?php echo "Welcome, ".$_SESSION['username']>  ?> </p>
+        <p>  <?php echo "Welcome, ".$_SESSION['username'];  ?> </p>
     </div>
   </div>
 </nav>
