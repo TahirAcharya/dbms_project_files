@@ -112,13 +112,13 @@
 <div class=" col-md-4 py-5 px-5 border">
 <h1>SIGNUP</h1>
 
-    <form action="signup.php" method="post">
-
+    <form action="signup.php" method="post"> 
+<!-- Send data via form (POST) method OR  Send data via URL(GET) method -->
     <!-- Name  -->
     <div class="mb-3">
     <label for="exampleInputName" class="form-label">Name</label>
     
-    <input type="name" class="form-control" id="exampleInputName" name="Name" aria-describedby="NameHelp">
+    <input type="name" class="form-control" id="exampleInputName" name="Name" aria-describedby="NameHelp" required>
    
     <div id="NameHelp" class="form-text">Enter a full name</div>
   </div>
@@ -128,7 +128,7 @@
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email</label>
     
-    <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
+    <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" required>
    
     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
   </div>
@@ -136,11 +136,11 @@
   <!-- Password -->
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" name="password" id="exampleInputPassword1">
+    <input type="password" class="form-control" name="password" id="exampleInputPassword1" required>
   </div>
 
   <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
     <label class="form-check-label" for="exampleCheck1">Agree to terms and conditions</label>
   </div>
 
