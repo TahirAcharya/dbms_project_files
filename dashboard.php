@@ -78,7 +78,7 @@
         </li>
       </ul>
     </div>
-        <p>    </p>
+        <p>  <?php echo "Welcome, ".$_SESSION['username']>  ?> </p>
     </div>
   </div>
 </nav>

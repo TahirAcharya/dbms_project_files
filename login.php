@@ -1,4 +1,5 @@
 <?php
+session_start();
     // Database connection details
     $servername = "localhost";
     $username = "root";
@@ -24,6 +25,9 @@
         $result = mysqli_query($conn, $sql);
 
         if (mysqli_num_rows($result) == 1) {
+            $row = mysqli_fetch_array($result);
+            $_SESSION['userid'] = $_POST['email'];
+            $_SESSION['username'] = $row['studentname'];
             // User found, redirect to dashboard
             header("Location: dashboard.php");
             exit();
