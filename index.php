@@ -49,16 +49,11 @@
       $conn = mysqli_connect ($servername, $username, $password,$database_name);
 
       // Check connection
-      if (!$conn) 
-      {    //    !0  !false == true       !1 == !true => false
-        echo "<div class='alert alert-danger' role='alert'>
-        Connection failed: 
-      </div>";
-      } else 
-      {
-        echo "<div class='alert alert-success' role='alert'>
-        Connected successfully
-      </div>";
+      if ($conn) 
+      {   
+       
+
+       
       }
 
     ?>
@@ -116,21 +111,41 @@
 
 <div class=" col-md-4 py-5 px-5 border">
 <h1>SIGNUP</h1>
+
     <form action="signup.php" method="post">
+
+    <!-- Name  -->
+    <div class="mb-3">
+    <label for="exampleInputName" class="form-label">Name</label>
+    
+    <input type="name" class="form-control" id="exampleInputName" name="Name" aria-describedby="NameHelp">
+   
+    <div id="NameHelp" class="form-text">Enter a full name</div>
+  </div>
+
+
+<!-- Email   -->
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="exampleInputEmail1" class="form-label">Email</label>
+    
+    <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
+   
     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
   </div>
+
+  <!-- Password -->
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
+    <input type="password" class="form-control" name="password" id="exampleInputPassword1">
   </div>
+
   <div class="mb-3 form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    <label class="form-check-label" for="exampleCheck1">Agree to terms and conditions</label>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+
+  <button type="submit" class="btn btn-primary">Create Account</button>
+
 </form>
 </div>
     
