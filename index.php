@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+
 if(isset($_SESSION['username']))
 {
     header("Location: dashboard.php");
@@ -94,7 +95,14 @@ else
   </div>
 </nav>
 
-
+<div> 
+  <?php 
+  if(isset($_GET['error']))
+  {
+    echo "<div class='alert alert-warning alert-dismissible fade show' role='alert'>".$_GET['error']."</div>";
+  }
+  ?>
+</div>
 <div class="row justify-content-center py-2">
 
   <div class=" col-md-4 vh-100 px-5 border">

@@ -28,7 +28,7 @@
         if (mysqli_query($conn, $sql))  // either true or false    1 or zero
         {
             // Data inserted successfully, redirect to login.php
-            header("Location: index.php");
+            header("Location: index.php?error=Signup success");
 
 
 // <script>window.location = 'login.php';</script>
