@@ -19,8 +19,7 @@ else
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
     .shadow_card {
         border-radius: var(--bs-border-radius) !important;
@@ -28,7 +27,6 @@ else
         border-top-right-radius: 1px;
         border-bottom-right-radius: 1px;
         border-bottom-left-radius: 1px;
-
     }
 
 
@@ -56,8 +54,6 @@ else
         display: block;
         margin-bottom: 10px;
     }
-
-
 
     button {
         background-color: #4caf50;
@@ -94,19 +90,19 @@ else
         </div>
     </nav>
 
-    <div class="alert-dismissible fade show" role="alert">
-        <?php 
+
+    <div class="container ">
+        <div class="row justify-content-center py-2 ">
+
+        <div class="alert-dismissible fade show pt-4" role="alert">
+                        <?php 
     if(isset($_GET['error']))
     {
       echo "<div class='alert alert-warning alert-dismissible fade show' role='alert'>".$_GET['error']."</div>";
     }
    ?>
-    </div>
-    <div class="container ">
-        <div class="row justify-content-center py-2 ">
-
-
-            <div class=" col-md-6   ">
+                    </div>
+            <div class=" col-md-10   ">
                 <h1>LOGIN</h1>
 
                 <form action="login.php" method="post">
@@ -130,70 +126,82 @@ else
                     <!-- submit button -->
                     <button type="submit" class="btn btn-primary">Submit</button>
 
+                    
                 </form>
             </div>
         </div>
-        </div>
-        <!-- login screen ended -->
+    </div>
+    <!-- login screen ended -->
 
-        
 
-        <!-- signup screen started -->
-        <div class="container ">
+
+    <!-- signup screen started -->
+    <div class="container ">
         <div class="row justify-content-center py-2 ">
+        <div class="alert-dismissible fade show pt-4" role="alert">
+                        <?php 
+    if(isset($_GET['error_signup']))
+    {
+      echo "<div class='alert alert-warning alert-dismissible fade show' role='alert'>".$_GET['error_signup']."</div>";
+    }
+   ?>
+                    </div>
 
+            <div class=" col-md-10   ">
+                <h1>SIGNUP</h1>
 
-            <div class=" col-md-6   ">
-            <h1>SIGNUP</h1>
+                <form action="signup.php" method="post">
+                    <!-- Send data via form (POST) method OR  Send data via URL(GET) method -->
+                    <!-- Name  -->
+                    <div class="mb-3">
+                        <label for="exampleInputName" class="form-label">Name</label>
 
-            <form action="signup.php" method="post">
-                <!-- Send data via form (POST) method OR  Send data via URL(GET) method -->
-                <!-- Name  -->
-                <div class="mb-3">
-                    <label for="exampleInputName" class="form-label">Name</label>
+                        <input type="name" class="form-control" id="exampleInputName" name="Name"
+                            aria-describedby="NameHelp" required>
 
-                    <input type="name" class="form-control" id="exampleInputName" name="Name"
-                        aria-describedby="NameHelp" required>
+                        <div id="NameHelp" class="form-text">Enter a full name</div>
+                    </div>
 
-                    <div id="NameHelp" class="form-text">Enter a full name</div>
-                </div>
+                    <!-- Email   -->
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email</label>
 
+                        <input type="email" class="form-control" id="exampleInputEmail1" name="email"
+                            aria-describedby="emailHelp" required>
 
-                <!-- Email   -->
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
 
-                    <input type="email" class="form-control" id="exampleInputEmail1" name="email"
-                        aria-describedby="emailHelp" required>
+                    <!-- Password -->
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" name="password" id="exampleInputPassword1" required>
+                    </div>
 
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                </div>
+                    <!-- Select faculty or student -->
+                    <div class="form-group mb-3">
 
-                <!-- Password -->
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" name="password" id="exampleInputPassword1" required>
-                </div>
+                        <label for="inputGroupSelect01" class="form-label">User Type</label>
+                        <select class="form-control" id="inputGroupSelect01" name="usertype" required>
 
-                <!-- Select faculty or student -->
-                <div class="input-group mb-3">
-                    <label for="inputGroupSelect01" class="form-label">Select Type of User</label><br />
-                    <select class="custom-select" name="usertype" id="inputGroupSelect01">
-                        <option selected>Choose Type of User</option>
-                        <option value="student">Student</option>
-                        <option value="faculty">Faculty</option>
-                    </select>
-                </div>
+                            <option selected>Select Type of User</option>
+                            <option value="admin">Admin</option>
+                            <option value="student">Student</option>
+                            <option value="faculty">Faculty</option>
+                        </select>
+                    </div>
 
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
-                    <label class="form-check-label" for="exampleCheck1">Agree to terms and conditions</label>
-                </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                        <label class="form-check-label" for="exampleCheck1">Agree to terms and conditions</label>
+                    </div>
 
-                <button type="submit" class="btn btn-primary">Create Account</button>
-
-            </form>
-        </div></div></div>
+                    <button type="submit" class="btn btn-primary">Create Account</button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
 
     </div>
 

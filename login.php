@@ -22,7 +22,7 @@ include 'connection.php';
             exit();
         } else {
             // User not found, redirect back to login with error message
-            header("Location: index.php?error=invalid"); // error sent to index.php via GET method
+            header("Location: index.php?error=Invalid username or password"); // error sent to index.php via GET method
             exit();
         }
     }

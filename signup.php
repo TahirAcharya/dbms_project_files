@@ -13,16 +13,13 @@ include 'connection.php';
 
         // SQL query to insert data into the student table
         $sql = "INSERT INTO students VALUES (NULL,'$name', '$email', '$password', '$reg_date',' $usertype')";
-
+try{
         if (mysqli_query($conn, $sql))  // either true or false    1 or zero
         {
             // Data inserted successfully, redirect to login.php
             header("Location: index.php?error=Signup success");
 
-
 // <script>window.location = 'login.php';</script>
-
-
             // echo "";
 
             exit(); // Ensure that no further code is executed after the redirect
@@ -32,7 +29,11 @@ include 'connection.php';
           </div>";
         }
     }
-
+    catch (Exception $e) 
+    {
+        header("Location: index.php?error_signup=User already exist");
+    }
+    }
     // Close the database connection
     mysqli_close($conn);
 ?>
